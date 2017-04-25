@@ -8,7 +8,7 @@ import { HeroService } from './hero.service';
   styleUrls: ['./app.component.css'],
   providers: [HeroService]
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'Tour of heroes';
   hero: Hero = {
     id: 1,
@@ -20,7 +20,7 @@ export class AppComponent implements OnInit{
   constructor(private heroService: HeroService) {}
 
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
+    this.heroService.getHeroes().then(heroes => this.heroes = heroes);
   }
 
   ngOnInit(): void {
