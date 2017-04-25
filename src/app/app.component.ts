@@ -25,6 +25,11 @@ export class AppComponent {
     name: 'Spiderman'
   };
   heroes = HEROES;
+  selectedHero: Hero = this.heroes[0];
+
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
 }
 
 export class Hero {

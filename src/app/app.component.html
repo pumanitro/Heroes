@@ -1,14 +1,16 @@
 <h1>{{title}}</h1>
-<h2>{{hero.name}} details!</h2>
-<div><label>id: </label>{{hero.id}}</div>
 
-<md-input-container>
-  <input mdInput placeholder="Name :" [(ngModel)]="hero.name">
-</md-input-container>
+<div *ngIf="selectedHero">
+  <h2>{{selectedHero.name}} details!</h2>
+  <div><label>id: </label>{{selectedHero.id}}</div>
+  <md-input-container>
+    <input mdInput placeholder="Name :" [(ngModel)]="selectedHero.name">
+  </md-input-container>
+</div>
 
 <md-list>
   <md-list-item *ngFor="let hero of heroes">
-    <button md-button>
+    <button md-button (click)="onSelect(hero)" [class.activeBtn]="hero === selectedHero">
     <md-chip-list>
       <md-chip color="primary" selected="true">{{hero.id}}</md-chip>
     </md-chip-list>
