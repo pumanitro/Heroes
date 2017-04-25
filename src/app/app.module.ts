@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 // For angular Material :
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import 'hammerjs';
+import {MdInputModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -17,8 +18,10 @@ import 'hammerjs';
     BrowserModule,
     FormsModule,
     HttpModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MdInputModule
   ],
+  exports: [MdInputModule],
   providers: [],
   bootstrap: [AppComponent]
 })
