@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 // For angular Material :
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import 'hammerjs';
-import {MdInputModule} from '@angular/material';
+import {MdInputModule, MdListModule, MdChipsModule, MdButtonModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -19,9 +19,9 @@ import {MdInputModule} from '@angular/material';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    MdInputModule
+    MdInputModule, MdListModule, MdChipsModule, MdButtonModule
   ],
-  exports: [MdInputModule],
+  exports: [MdInputModule, MdListModule, MdChipsModule, MdButtonModule],
   providers: [],
   bootstrap: [AppComponent]
 })

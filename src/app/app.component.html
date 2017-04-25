@@ -6,3 +6,13 @@
   <input mdInput placeholder="Name :" [(ngModel)]="hero.name">
 </md-input-container>
 
+<md-list>
+  <md-list-item *ngFor="let hero of heroes">
+    <button md-button>
+    <md-chip-list>
+      <md-chip color="primary" selected="true">{{hero.id}}</md-chip>
+    </md-chip-list>
+    {{hero.name}}</button>
+
+  </md-list-item>
+</md-list>
