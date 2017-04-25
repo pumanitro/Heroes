@@ -9,10 +9,12 @@ import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import 'hammerjs';
 import {MdInputModule, MdListModule, MdChipsModule, MdButtonModule} from '@angular/material';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule,
