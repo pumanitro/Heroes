@@ -16,6 +16,8 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+import {HeroService} from './hero.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +48,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ])
   ],
   exports: [MdInputModule, MdListModule, MdChipsModule, MdButtonModule],
-  providers: [],
+  providers: [HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
