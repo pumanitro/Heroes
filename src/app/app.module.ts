@@ -8,9 +8,12 @@ import { AppComponent } from './app.component';
 // For angular Material :
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import 'hammerjs';
-import {MdInputModule, MdListModule, MdChipsModule, MdButtonModule} from '@angular/material';
+import {MdInputModule, MdListModule, MdChipsModule, MdButtonModule, MdTabsModule} from '@angular/material';
+
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroesComponent } from './heroes/heroes.component';
+
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,13 @@ import { HeroesComponent } from './heroes/heroes.component';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    MdInputModule, MdListModule, MdChipsModule, MdButtonModule
+    MdInputModule, MdListModule, MdChipsModule, MdButtonModule, MdTabsModule,
+    RouterModule.forRoot([
+      {
+        path: 'heroes',
+        component: HeroesComponent
+      }
+    ])
   ],
   exports: [MdInputModule, MdListModule, MdChipsModule, MdButtonModule],
   providers: [],

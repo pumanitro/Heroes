@@ -9,7 +9,6 @@ import { HeroService } from '../hero.service';
   providers: [HeroService]
 })
 export class HeroesComponent implements OnInit {
-  title = 'Tour of heroes';
   hero: Hero = {
     id: 1,
     name: 'Spiderman'
