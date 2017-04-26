@@ -31,6 +31,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MdInputModule, MdListModule, MdChipsModule, MdButtonModule, MdTabsModule,
     RouterModule.forRoot([
       {
+        path: '',
+        redirectTo: '/dashboard',
+        pathMatch: 'full'
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
+      {
         path: 'heroes',
         component: HeroesComponent
       }
