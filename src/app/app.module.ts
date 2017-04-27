@@ -13,10 +13,11 @@ import {MdInputModule, MdListModule, MdChipsModule, MdButtonModule, MdTabsModule
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroesComponent } from './heroes/heroes.component';
 
-import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import {HeroService} from './hero.service';
+
+import {RoutingModule} from './routing/routing.module';
 
 @NgModule({
   declarations: [
@@ -31,25 +32,7 @@ import {HeroService} from './hero.service';
     HttpModule,
     BrowserAnimationsModule,
     MdInputModule, MdListModule, MdChipsModule, MdButtonModule, MdTabsModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        redirectTo: '/dashboard',
-        pathMatch: 'full'
-      },
-      {
-        path: 'dashboard',
-        component: DashboardComponent
-      },
-      {
-        path: 'detail/:id',
-        component: HeroDetailComponent
-      },
-      {
-        path: 'heroes',
-        component: HeroesComponent
-      }
-    ])
+    RoutingModule
   ],
   exports: [MdInputModule, MdListModule, MdChipsModule, MdButtonModule],
   providers: [HeroService],
