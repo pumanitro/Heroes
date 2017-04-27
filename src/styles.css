@@ -1,17 +1,1 @@
 /* You can add global styles to this file, and also import other style files */
-
-md-chip-list > .mat-chip-list-wrapper {
-  display: inline !important;
-}
-
-button.mat-button .mat-button-wrapper {
-  float: left;
-}
-
-button.mat-button {
-  width: 150px;
-}
-
-.mat-list .mat-list-item .mat-list-item-content, .mat-nav-list .mat-list-item .mat-list-item-content{
-  padding-left:0px!important;
-}

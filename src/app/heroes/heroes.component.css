@@ -1,3 +1,18 @@
 .activeBtn{
   background-color: rgba(199, 199, 199, 0.72);
 }
+:host /deep/ md-chip-list > .mat-chip-list-wrapper {
+  display: inline !important;
+}
+
+:host /deep/ button.mat-button .mat-button-wrapper {
+  float: left;
+}
+
+:host /deep/ button.mat-button {
+  width: 150px;
+}
+
+:host /deep/ .mat-list .mat-list-item .mat-list-item-content, .mat-nav-list .mat-list-item .mat-list-item-content{
+  padding-left:0px!important;
+}
