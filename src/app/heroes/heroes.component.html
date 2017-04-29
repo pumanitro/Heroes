@@ -1,9 +1,8 @@
 <div *ngIf="selectedHero">
-  <h2>{{selectedHero.name}} details!</h2>
-  <div><label>id: </label>{{selectedHero.id}}</div>
-  <md-input-container>
-    <input mdInput placeholder="Name :" [(ngModel)]="selectedHero.name">
-  </md-input-container>
+  <h2>
+    {{selectedHero.name | uppercase}} is my hero
+  </h2>
+  <button md-raised-button (click)="gotoDetail()">View Details</button>
 </div>
 
 <md-list>
@@ -17,4 +16,3 @@
   </md-list-item>
 </md-list>
 
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
