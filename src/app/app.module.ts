@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 // For angular Material :
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import 'hammerjs';
-import {MdInputModule, MdListModule, MdChipsModule, MdButtonModule, MdTabsModule} from '@angular/material';
+import {MdInputModule, MdListModule, MdChipsModule, MdButtonModule, MdTabsModule, MdAutocompleteModule} from '@angular/material';
 
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroesComponent } from './heroes/heroes.component';
@@ -37,11 +37,11 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    MdInputModule, MdListModule, MdChipsModule, MdButtonModule, MdTabsModule,
+    MdInputModule, MdListModule, MdChipsModule, MdButtonModule, MdTabsModule, MdAutocompleteModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     RoutingModule
   ],
-  exports: [MdInputModule, MdListModule, MdChipsModule, MdButtonModule],
+  exports: [MdInputModule, MdListModule, MdChipsModule, MdButtonModule, MdAutocompleteModule],
   providers: [HeroService],
   bootstrap: [AppComponent]
 })
