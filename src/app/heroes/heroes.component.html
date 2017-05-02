@@ -18,7 +18,9 @@
       <md-chip-list>
         <md-chip color="primary" selected="true">{{hero.id}}</md-chip>
       </md-chip-list>
-      {{hero.name}}</button>
+      {{hero.name}}
+    </button>
+    <button class="delete" md-icon-button (click)="delete(hero); $event.stopPropagation()"><i class="material-icons">delete_forever</i></button>
 
   </md-list-item>
 </md-list>
