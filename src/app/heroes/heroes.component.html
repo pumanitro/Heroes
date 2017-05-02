@@ -5,6 +5,13 @@
   <button md-raised-button (click)="gotoDetail()">View Details</button>
 </div>
 
+<div class="addingDiv">
+  <md-input-container>
+    <input #heroName mdInput placeholder="Hero name :">
+  </md-input-container>
+  <button md-mini-fab (click)="add(heroName.value); heroName.value=''">+</button>
+</div>
+
 <md-list>
   <md-list-item *ngFor="let hero of heroes">
     <button md-button (click)="onSelect(hero)" [class.activeBtn]="hero === selectedHero">
